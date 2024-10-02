@@ -1,3 +1,22 @@
+/* Table of Contents
+1. Root Variables
+2. Background Colors
+3. Menu Styles
+4. Theme-Specific Styles
+   4.1 Light Mode
+   4.2 Dark Mode
+5. Workspace Styles
+6. Interactive Element Styles
+7. Typography
+   7.1 Headline Styles
+   7.2 Headline Sizes
+8. Link Styles
+   8.1 Reading View Links
+   8.2 Internal Links
+   8.3 General Link Styles
+*/
+
+/* 1. Root Variables */
 body {
 	--radius-s: 0px;
 	--radius-m: 0px;
@@ -9,12 +28,11 @@ body {
 	--toggle-thumb-radius: 0px;
 	--slider-thumb-radius: 0px;
 
-	/* Add background colors for light and dark modes */
-	--light-bg-color: #f0f0f0; /* Light gray for light mode */
-	--dark-bg-color: #2a2a2a; /* Dark gray for dark mode */
+	--light-bg-color: #f0f0f0;
+	--dark-bg-color: #2a2a2a;
 }
 
-/* Apply background colors */
+/* 2. Background Colors */
 body {
 	background-color: var(--light-bg-color);
 }
@@ -23,11 +41,7 @@ body {
 	background-color: var(--dark-bg-color);
 }
 
-.workspace-tab-header.is-active::before, .workspace-tab-header.is-active::after {
-	display: none;
-}
-
-
+/* 3. Menu Styles */
 .menu {
 	padding: var(--size-2-1);
 }
@@ -40,54 +54,45 @@ body {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
 
-/* Light mode styles */
+/* 4. Theme-Specific Styles */
+/* 4.1 Light Mode */
 .theme-light {
 	--background-primary: #f0f0f0;
 	--background-secondary: #e0e0e0;
-	--interactive-accent: #1e90ff; /* Dodger Blue */
-	--interactive-accent-hover: #4169e1; /* Royal Blue */
+	--interactive-accent: #1e90ff;
+	--interactive-accent-hover: #4169e1;
 }
 
-/* Dark mode styles */
+/* 4.2 Dark Mode */
 .theme-dark {
 	--background-primary: #2a2a2a;
 	--background-secondary: #333333;
-	--interactive-accent: #4682b4; /* Steel Blue */
-	--interactive-accent-hover: #6495ed; /* Cornflower Blue */
+	--interactive-accent: #4682b4;
+	--interactive-accent-hover: #6495ed;
 }
 
-/* Apply background colors */
+/* 5. Workspace Styles */
 .theme-light body,
-.theme-light .app-container {
-	background-color: var(--background-primary);
-}
-
+.theme-light .app-container,
 .theme-dark body,
 .theme-dark .app-container {
 	background-color: var(--background-primary);
 }
 
-/* Additional background color applications */
 .theme-light .workspace-tab-container,
 .theme-light .workspace-leaf,
-.theme-light .workspace-split {
-	background-color: var(--background-secondary);
-}
-
+.theme-light .workspace-split,
 .theme-dark .workspace-tab-container,
 .theme-dark .workspace-leaf,
 .theme-dark .workspace-split {
 	background-color: var(--background-secondary);
 }
 
-/* Apply accent colors to buttons and interactive elements */
+/* 6. Interactive Element Styles */
 .theme-light button,
 .theme-light .clickable-icon,
 .theme-light .nav-action-button,
-.theme-light .workspace-tab-header.is-active {
-	color: var(--interactive-accent);
-}
-
+.theme-light .workspace-tab-header.is-active,
 .theme-dark button,
 .theme-dark .clickable-icon,
 .theme-dark .nav-action-button,
@@ -101,38 +106,39 @@ button:hover,
 	color: var(--interactive-accent-hover);
 }
 
-/* Headline styles for both light and dark themes */
+/* 7. Typography */
+/* 7.1 Headline Styles */
 .markdown-preview-view h1,
 .markdown-source-view.mod-cm6 .cm-header-1 {
-  color: #0077be; /* Deep Sky Blue */
+  color: #0077be;
 }
 
 .markdown-preview-view h2,
 .markdown-source-view.mod-cm6 .cm-header-2 {
-  color: #20b2aa; /* Light Sea Green */
+  color: #20b2aa;
 }
 
 .markdown-preview-view h3,
 .markdown-source-view.mod-cm6 .cm-header-3 {
-  color: #4682b4; /* Steel Blue */
+  color: #4682b4;
 }
 
 .markdown-preview-view h4,
 .markdown-source-view.mod-cm6 .cm-header-4 {
-  color: #1e90ff; /* Dodger Blue */
+  color: #1e90ff;
 }
 
 .markdown-preview-view h5,
 .markdown-source-view.mod-cm6 .cm-header-5 {
-  color: #4169e1; /* Royal Blue */
+  color: #4169e1;
 }
 
 .markdown-preview-view h6,
 .markdown-source-view.mod-cm6 .cm-header-6 {
-  color: #6495ed; /* Cornflower Blue */
+  color: #6495ed;
 }
 
-/* Optional: Adjust headline sizes if desired */
+/* 7.2 Headline Sizes */
 .markdown-preview-view h1 { font-size: 2.2em; }
 .markdown-preview-view h2 { font-size: 1.8em; }
 .markdown-preview-view h3 { font-size: 1.6em; }
@@ -140,54 +146,54 @@ button:hover,
 .markdown-preview-view h5 { font-size: 1.2em; }
 .markdown-preview-view h6 { font-size: 1.1em; }
 
-/* Extremely specific selectors for links in reading view */
+/* 8. Link Styles */
+/* 8.1 Reading View Links */
 .theme-light .markdown-preview-view div:not(.frontmatter-container) a:not(.tag),
 .theme-light .markdown-reading-view div:not(.frontmatter-container) a:not(.tag),
 .theme-light .markdown-rendered div:not(.frontmatter-container) a:not(.tag) {
-  color: #4a4a4a !important; /* Dark gray for light mode */
+  color: #4a4a4a !important;
   text-decoration: none !important;
 }
 
 .theme-dark .markdown-preview-view div:not(.frontmatter-container) a:not(.tag),
 .theme-dark .markdown-reading-view div:not(.frontmatter-container) a:not(.tag),
 .theme-dark .markdown-rendered div:not(.frontmatter-container) a:not(.tag) {
-  color: #b0b0b0 !important; /* Lighter gray for dark mode */
+  color: #b0b0b0 !important;
   text-decoration: none !important;
 }
 
-/* Hover styles */
 .theme-light .markdown-preview-view div:not(.frontmatter-container) a:not(.tag):hover,
 .theme-light .markdown-reading-view div:not(.frontmatter-container) a:not(.tag):hover,
 .theme-light .markdown-rendered div:not(.frontmatter-container) a:not(.tag):hover {
-  color: #2a2a2a !important; /* Darker gray on hover for light mode */
+  color: #2a2a2a !important;
   text-decoration: underline !important;
 }
 
 .theme-dark .markdown-preview-view div:not(.frontmatter-container) a:not(.tag):hover,
 .theme-dark .markdown-reading-view div:not(.frontmatter-container) a:not(.tag):hover,
 .theme-dark .markdown-rendered div:not(.frontmatter-container) a:not(.tag):hover {
-  color: #d0d0d0 !important; /* Lighter gray on hover for dark mode */
+  color: #d0d0d0 !important;
   text-decoration: underline !important;
 }
 
-/* Update internal links to appear dark gray when viewing a file */
+/* 8.2 Internal Links */
 .markdown-preview-view a.cm-hmd-internal-link,
 .markdown-reading-view a.cm-hmd-internal-link,
 .markdown-rendered a.cm-hmd-internal-link {
-    color: #4a4a4a !important; /* Dark gray */
+    color: #4a4a4a !important;
     text-decoration: none !important;
 }
 
-/* Override all link colors to dark gray */
+/* 8.3 General Link Styles */
 a,
 .cm-hmd-internal-link {
-    color: #696969 !important; /* Dark gray */
+    color: #696969 !important;
     text-decoration: none !important;
 }
 
 a:hover,
 .cm-hmd-internal-link:hover,
 .cm-url {
-    color: #4a4a4a !important; /* Dark gray on hover */
+    color: #4a4a4a !important;
     text-decoration: none !important;
 }
