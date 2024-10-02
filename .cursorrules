@@ -1,0 +1,62 @@
+To effectively assist in developing your Obsidian theme repository, the following guidelines should be adhered to. These instructions ensure that all code generated aligns with best practices, maintains consistency, and leverages the full capabilities of CSS for creating a seamless and visually appealing markdown editing experience.
+
+# General Guidelines
+    Understand Obsidian’s Theming Structure:
+    -   Familiarize yourself with Obsidian’s theming system, including how themes are loaded and applied.
+    -   Utilize CSS variables (:root) for defining color schemes and other reusable properties to ensure consistency and ease of maintenance.
+
+    Adhere to CSS Best Practices:
+    -   Modularity: Break down styles into reusable classes and components to promote scalability and reduce redundancy.
+    -   Naming Conventions: Use clear, descriptive, and consistent naming conventions for classes and variables to enhance readability and maintainability.
+    -   Responsive Design: Ensure that the theme is responsive and looks good on all screen sizes and devices.
+
+    Maintain Consistency:
+    -   Color Scheme: Stick to the predefined color variables (--dark0, --light1, etc.) to maintain a cohesive look and feel.
+    -   Typography: Use consistent font families, sizes, and weights across different elements to ensure uniformity.
+    -   Spacing and Layout: Maintain consistent padding, margins, and layout structures to provide a harmonious user experience.
+
+
+# Theming Specifics
+    Light and Dark Modes:
+    -   Clearly differentiate styles for .theme-dark and .theme-light to provide optimal readability and aesthetics in both modes.
+    -   Adjust background and text colors appropriately to ensure sufficient contrast and accessibility.
+
+    Interactive Elements:
+        Links and Tags:
+        -   Define styles for link states (:hover, :active) to enhance interactivity without compromising on design consistency.
+        -   Style tags with appropriate padding, border-radius, and hover effects to make them distinguishable and user-friendly.
+        Checkboxes and Forms:
+        -   Customize checkbox styles to match the overall theme, ensuring they are easily recognizable and accessible.
+        -   Maintain consistent styling for form elements to provide a seamless user experience.
+
+    Tables and Data Views:
+    -   Style tables with clear borders, alternating row colors, and hover effects to improve readability and user interaction.
+    -   Ensure that data view components like keys and values are distinctly styled for clarity.
+
+    Code Blocks and Syntax Highlighting:
+    -   Use consistent styling for code blocks and inline code to differentiate them from regular text.
+    -   Apply syntax highlighting colors that align with the theme’s color palette for better code readability.
+
+
+# Accessibility and Performance
+    Color Contrast:
+    -   Ensure that text and interactive elements have sufficient color contrast against their backgrounds to support users with visual impairments.
+    -   Utilize tools to check and validate color contrast ratios as per WCAG guidelines.
+
+    Performance Optimization:
+    -   Minimize the use of heavy CSS properties and avoid unnecessary reflows and repaints to ensure smooth performance.
+    -   Optimize CSS selectors for better rendering performance and maintainability.
+
+    Scalability:
+    -   Design the theme to be easily extendable, allowing for future enhancements and additions without major overhauls.
+    -   Document styles and structures to facilitate collaborative development and ease of onboarding for new contributors.
+
+
+# Documentation and Maintenance
+    Comprehensive Documentation:
+    -   Maintain clear and detailed documentation of all CSS variables, classes, and components used in the theme.
+    -   Provide examples and usage guidelines to help users understand how to customize and extend the theme.
+
+    Version Control and Updates:
+    -   Use semantic versioning to manage updates and changes to the theme, ensuring backward compatibility where possible.
+    -   Regularly update dependencies and review code to incorporate the latest best practices and improvements.
